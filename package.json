@@ -1,0 +1,28 @@
+{
+  "name": "nwt-css-abuse-talk",
+  "version": "1.0.0",
+  "description": "North Wales Tech - CSS Abuse Talk",
+  "main": "index.js",
+  "repository": "git@github.com:PButcher/nwt-css-abuse-talk.git",
+  "author": "pbutcher <pbutcher93@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "node-sass": "^4.13.0",
+    "nodemon": "^1.19.4",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "clean": "rm -rf build && mkdir -p build",
+    "static": "cp -r static/* build",
+    "sass": "node-sass sass/main.scss -o build/css/",
+    "prebuild": "npm run clean",
+    "build": "npm run static && npm run sass",
+    "watch": "nodemon --watch sass --watch static -e scss,html --exec \"npm run build\"",
+    "serve": "nodemon index.js",
+    "start": "npx npm-run-all -p watch serve"
+  }
+}
