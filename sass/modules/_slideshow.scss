@@ -80,11 +80,11 @@
   }
 
   @if $b-slides {
-    $i: 2;
+    $i: 1;
     @each $slide in $b-slides {
       &__html { display: none; }
 
-      &:nth-child(#{$i}) {
+      &:nth-child(#{$i * 2}) {
         background: $slide;
         background-repeat: no-repeat;
         background-size: 100%;
@@ -94,7 +94,7 @@
           @include slideshow__slide-popout;
         }
       }
-      $i: $i + 2;
+      $i: $i + 1;
     }
   } @else {
 
