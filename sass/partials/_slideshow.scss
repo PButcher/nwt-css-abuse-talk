@@ -1,0 +1,22 @@
+@import '../modules/slideshow';
+
+.slideshow {
+
+  @include slideshow;
+
+  & > input {
+    @include slideshow__input;
+  }
+
+  .slide {
+    @include slideshow__slide;
+  }
+
+  nav {
+    @include slideshow__nav;
+  }
+
+  label {
+    @include slideshow__label;
+  }
+}

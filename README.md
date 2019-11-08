@@ -11,8 +11,8 @@ The talk is available [online](https://pbutcher.uk/nwt-css-abuse-talk). Alternat
 ## Build and Serve Locally
 
 1. Clone this repository via HTTPS or SSH.
-2. Install via NPM with `npm install`, or Yarn with `yarn install`.
-3. Build via NPM with `npm build`, or Yarn with `yarn build`.
+2. Install via NPM with `npm install`, or via Yarn with `yarn install`.
+3. Build with either `npm build` or `yarn build`.
 4. Serve locally with either `npm start` or `yarn start`.
 5. The slide deck is now running at [`localhost:3000`](localhost:3000).
 

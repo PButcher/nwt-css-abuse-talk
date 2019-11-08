@@ -1,4 +1,3 @@
-body {
-  color: red;
-  font-weight: bold;
-}
+@import 'partials/settings',
+        'partials/base',
+        'partials/slideshow';
