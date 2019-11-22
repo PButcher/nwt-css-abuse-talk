@@ -1,0 +1,9 @@
+@mixin slide2 {
+  &__html {
+    background-color: orange;
+  }
+
+  &__content {
+    color: green;
+  }
+}

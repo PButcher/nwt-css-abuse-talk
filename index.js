@@ -7,5 +7,6 @@ app.get('/', function(req, res) {
 });
 
 app.use(express.static(path.join(__dirname + '/build/css')));
+app.use(express.static(path.join(__dirname + '/build/assets')));
 
 app.listen(3000);
