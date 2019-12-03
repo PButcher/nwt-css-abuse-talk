@@ -1,0 +1,5 @@
+@import "../modules/author";
+
+.author {
+  @include author;
+}

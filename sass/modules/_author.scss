@@ -1,0 +1,49 @@
+@mixin author {
+  position: absolute;
+  width: 510px;
+  bottom: 100px;
+  right: 0px;
+  left: 0px;
+  margin: auto;
+  box-sizing: border-box;
+
+  &__avatar {
+    $avatar-width: 125px;
+    float: left;
+    width: $avatar-width;
+    height: $avatar-width;
+    background-image: url("img/peter-butcher.jpg");
+    background-repeat: no-repeat;
+    background-size: $avatar-width;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+  }
+
+  &__text {
+    h3 {
+      font-size: 1.5em;
+      margin-top: 0px;
+      margin-bottom: 5px;
+      color: #202020;
+    }
+
+    p {
+      margin-top: 0px;
+      color: #303030;
+    }
+
+    .social {
+      color: #505050;
+      margin: 0px 0px 5px 0px;
+
+      span {
+        margin-right: 15px;
+      }
+
+      i {
+        margin-right: 8px;
+      }
+    }
+  }
+}

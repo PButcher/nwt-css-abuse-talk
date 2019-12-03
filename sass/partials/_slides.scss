@@ -1,5 +1,9 @@
-@import '../modules/slides/slide1';
-@import '../modules/slides/slide2';
+@import "../modules/slides/slide1";
+@import "../modules/slides/slide2";
 
-.slide:nth-of-type(1) .slide { @include slide1 }
-.slide:nth-of-type(2) .slide { @include slide2 }
+.slide:nth-of-type(1) .slide {
+  @include slide1;
+}
+.slide:nth-of-type(2) .slide {
+  @include slide2;
+}

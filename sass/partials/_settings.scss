@@ -3,10 +3,10 @@
 // ----
 
 // Number of slides
-$slide-count: 5;
+$slide-count: 10;
 
 // Tab colours (must be same as number of slides)
-$c-slides: #2E112D #540032 #820333 #C9283E #F0433A;
+$c-slides: rgb(219, 43, 87) #ccc #ccc #ccc #ccc #ccc #ccc #ccc #ccc #ccc;
 
 // Slide backgrounds (if used, must be same as number of slides, otherwise false)
 $b-slides: false;
@@ -22,11 +22,15 @@ $slide-height: 100%;
 $slide-overflow: auto;
 
 // Slide content colours
-$c-black: #000;
-$c-grey: #AAA;
-$c-light-grey: #DDD;
+$c-black: #101010;
+$c-grey: #aaa;
+$c-light-grey: #ddd;
 
 // Other colours
-$c-background: #101010;
+$c-slide-counter-background: rgba(0, 0, 0, 0.5);
+$c-slide-counter-text: rgba(255, 255, 255, 1);
+$c-slide-active-label-border: rgb(212, 63, 63);
+$c-slide-active-label-text: $c-black;
+$c-background: #fff;
 $c-text: $c-light-grey;
 $c-label-text: $c-grey;

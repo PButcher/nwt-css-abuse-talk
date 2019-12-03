@@ -1,7 +1,6 @@
-@import '../modules/slideshow';
+@import "../modules/slideshow";
 
 .slideshow {
-
   @include slideshow;
 
   & > input {

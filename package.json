@@ -20,11 +20,12 @@
     "static": "cp -r static/* build",
     "sass": "node-sass -q sass/main.scss -o build/css/",
     "prebuild": "npm run --silent clean",
-    "build": "npm run --silent msg:build && npm run --silent static && npm run --silent sass",
+    "build": "npm run --silent msg:build && npm run --silent static && npm run --silent sass && npm run msg:done",
     "watch": "nodemon -q --watch sass --watch static -e scss,html --exec \"npm run --silent build\"",
     "serve": "npm --silent run msg:serve && nodemon -q index.js",
     "start": "npx npm-run-all --silent -p watch serve",
     "msg:serve": "echo \"\\x1b[91mStarting server at: localhost:3000\\x1b[0m\"",
-    "msg:build": "echo \"\\x1b[91mBuilding...\\x1b[0m\""
+    "msg:build": "echo \"\\x1b[91mBuilding...\\x1b[0m\"",
+    "msg:done": "echo \"\\x1b[91mDone!\\x1b[0m\""
   }
 }

@@ -1,70 +1,27 @@
 @mixin slide1 {
-
   &__html {
-    background-color: #FFF;
+    background-color: rgb(219, 43, 87);
   }
 
   &__content {
     .title {
+      width: 510px;
+      margin: auto;
 
       h1 {
-        font-size: 3em;
-        color: #FFF;
+        font-size: 5em;
+        color: #202020;
+        font-weight: 700;
+        width: 300px;
+        line-height: 1em;
+        margin-top: 75px;
         margin-bottom: 0px;
       }
 
       h2 {
         font-size: 2em;
-        color: #AAA;
-        margin-top: 0px;
-      }
-    }
-
-    .author {
-
-      position: absolute;
-      bottom: 50px;
-      width: 100%;
-      box-sizing: border-box;
-
-      &__avatar {
-        $avatar-width: 125px;
-        float: left;
-        width: $avatar-width;
-        height: $avatar-width;
-        background-image: url('img/peter-butcher.jpg');
-        background-repeat: no-repeat;
-        background-size: $avatar-width;
-        margin-right: 25px;
-        margin-bottom: 10px;
-        border-radius: 50%;
-      }
-
-      &__text {
-        h3 {
-          font-size: 1.5em;
-          margin-top: 0px;
-          margin-bottom: 5px;
-          color: #FFF;
-        }
-
-        p {
-          margin-top: 0px;
-          color: #AAA;
-        }
-
-        .social {
-          color: #FFF;
-          margin: 0px 0px 5px 0px;
-
-          span {
-            margin-right: 15px;
-          }
-
-          i {
-            margin-right: 8px;
-          }
-        }
+        color: #202020;
+        margin-top: 30px;
       }
     }
   }
