@@ -28,13 +28,44 @@
       <input type="radio" id="slide1" name="slide" checked autofocus />
       <div class="slide">
         <!-- Include HTML instead of an image using div.slide__image -->
-        <div class="slide__html"></div>
+        <div class="slide__html">
+          <div class="wrapper">
+            <div class="snow snow__layer-1"></div>
+            <div class="snow snow__layer-1 snow__layer-1--delay"></div>
+            <div class="snow snow__layer-2"></div>
+            <div class="snow snow__layer-2 snow__layer-2--delay"></div>
+            <div class="reindeer">
+              <div class="head">
+                <div class="eyes-and-nose"></div>
+                <div class="antlers">
+                  <div class="outside-antler-trunk right">
+                    <div class="antler-branches right"></div>
+                  </div>
+                  <div class="outside-antler-trunk left">
+                    <div class="antler-branches left"></div>
+                  </div>
+                  <div class="inside-antler right"></div>
+                  <div class="inside-antler left"></div>
+                </div>
+              </div>
+              <div class="tail"></div>
+              <div class="legs">
+                <div class="leg-rear-right"></div>
+                <div class="leg-rear-left"></div>
+                <div class="leg-front-right"></div>
+                <div class="leg-front-left"></div>
+              </div>
+              <div class="ground"></div>
+            </div>
+            <div class="snow snow__layer-3"></div>
+            <div class="snow snow__layer-3 snow__layer-3--delay"></div>
+          </div>
+        </div>
         <div class="slide__content">
           <div class="title">
             <h1>Festive CSS Abuse</h1>
             <h2>Pushing the boundaries of CSS</h2>
           </div>
-
           <div class="author">
             <div class="author__avatar"></div>
             <div class="author__text">
@@ -42,8 +73,8 @@
               <p>Research Officer in Visualization, Bangor University</p>
               <p class="social">
                 <i class="fab fa-twitter"></i><span>pwsbutcher</span>
-                <i class="fab fa-github"></i><i class="fab fa-codepen"></i
-                ><span>PButcher</span>
+                <i class="fab fa-github"></i><i class="fab fa-codepen"></i>
+                <span>PButcher</span>
               </p>
               <p class="social">
                 <i class="fal fa-globe"></i><span>pbutcher.uk</span>
@@ -57,13 +88,269 @@
       <!-- Slide 2 -->
       <input type="radio" id="slide2" name="slide" />
       <div class="slide">
-        <div class="slide__html"></div>
+        <div class="slide__html">
+          <div class="webpages">
+            <div class="blank-page">
+              <h1>My bog standard web page</h1>
+              <h2>I just wish I had some style.</h2>
+              <p>Maybe I'll add that to my Christmas list...</p>
+            </div>
+            <div class="styled-page">
+              <h1 class="bounce">Huzzah!</h1>
+              <h2>Just what I wished for.</h2>
+              <p>CSS is pretty neat!</p>
+            </div>
+          </div>
+        </div>
         <div class="slide__content">
-          <h1>Thanks for listening!</h1>
+          <h1>What is CSS?</h1>
+          <h2>And what can it do?</h2>
+          <p>
+            CSS stands for <strong>Cascading</strong> <strong>Style</strong>
+            <strong>Sheets</strong> and they're responsible for adding colour,
+            format and fonts to our webpages, and so much more.
+          </p>
+          <p>
+            They're more <strong>capable</strong> than some people might think.
+          </p>
+          <p>
+            We're going to <strong>push the boundaries</strong> beyound typical
+            uses of CSS and stretch its legs a bit by exploring:
+          </p>
+          <ul>
+            <li>Fast and fluid animations</li>
+            <li>What's possible in a single element?</li>
+            <li>What are the practical uses of these techniques?</li>
+          </ul>
+          <p>
+            <em>
+              There's too much cool stuff to cover in a short talk, but
+              hopefully this will whet your appetite!
+            </em>
+          </p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <input type="radio" id="slide3" name="slide" />
+      <div class="slide">
+        <div class="slide__html">
+          <div class="loaders">
+            <div class="row">
+              <div class="loader circle-loader-1"></div>
+              <div class="loader circle-loader-2"></div>
+            </div>
+            <div class="row">
+              <div class="loader square-loader"></div>
+              <div class="loader google-loader">
+                <div class="google-loader-bar"></div>
+                <div class="google-loader-bar"></div>
+                <div class="google-loader-bar"></div>
+                <div class="google-loader-bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide__content">
+          <h1>Practical uses</h1>
+          <h2>Some inspiration</h2>
+          <p>
+            Here we have 4 loading spinners which you might recognise from the
+            Internet.
+          </p>
+          <p>
+            Each of these were created with pure CSS.
+          </p>
+          <p>The first 3 with a <strong>single element</strong> each.</p>
+          <pre>
+.circle-loader {
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
+  min-height: 100px;
+  display: flex;
+  margin: auto;
+  border-radius: 50%;
+  border-top: 10px solid rgba(255, 255, 255, 0.2);
+  border-right: 10px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 10px solid rgba(255, 255, 255, 0.2);
+  border-left: 10px solid rgba(255, 255, 255, 1);
+  transform: translateZ(0);
+  animation: circle-loader-spin 1s infinite linear;
+}
+
+@keyframes circle-loader-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+          </pre>
+          <p>
+            Using simple, every day CSS primitives, we are able to create more
+            complex shapes by tweaking parameters.
+          </p>
+          <p>
+            Animating DOM elements with CSS should provide a smoother, more
+            fluid animation than with JavaScript.
+          </p>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <input type="radio" id="slide4" name="slide" />
+      <div class="slide">
+        <div class="slide__html">
+          <div style="transform: scale(2); height: 100%;">
+            <div class="box"></div>
+          </div>
+        </div>
+        <div class="slide__content">
+          <h1>Pseudo Elements</h1>
+          <h2>Secret weapon for single element CSS</h2>
+          <p>
+            The <code>::before</code> and <code>::after</code> pseudo elements
+            give us 2 extra canvases to work with as well as the main element:
+          </p>
+          <pre>
+.gift {
+  /* Box styles */
+
+  &::before {
+    /* Top ribbon styles */
+  }
+
+  &::after {
+    /* Other top ribbon styles
+  }
+}</pre
+          >
+          <p>
+            There are special rules governing what can and can't be done with
+            pseudo elements. This can be quite restrictive and adds to the
+            challenge!
+          </p>
+          <p>
+            <strong>PROTIP:</strong> Use a CSS pre-processor like LESS or SASS
+            to save writing heaps of repetitive code. More on that in a minute.
+          </p>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <input type="radio" id="slide5" name="slide" />
+      <div class="slide">
+        <div class="slide__html">
+          <div style="height: 100%; transform: scale(1.5)">
+            <div class="wall-e"></div>
+          </div>
+        </div>
+        <div class="slide__content">
+          <h1>Gradients</h1>
+          <h2>Lots and lots of gradients...</h2>
+          <p>This Wall-E is a single div. Animations and all.</p>
+          <pre>&lt;div class="wall-e"&gt;&lt;/div&gt;</pre>
+          <p>
+            The secret, alongside pseudo elements, is extensive use of linear
+            and radial <strong>gradients</strong> to produce shapes you see.
+          </p>
+          <pre>
+// Main body background
+linear-gradient(
+  to bottom,
+  transparent 0px,
+  $c-electronics 0px, $c-electronics 20px,
+  darken($c-body-edge, 40%) 20px, $c-body-edge 31px,
+  $c-body-edge 31px, darken($c-body-edge, 20%) 57px,
+  $c-sump 57px, darken($c-sump, 5%) 62px,
+  transparent 62px
+),</pre
+          >
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <input type="radio" id="slide6" name="slide" />
+      <div class="slide">
+        <div class="slide__html">
+          <div style="height: 100%; transform: scale(1.5)">
+            <div class="snowman"></div>
+          </div>
+        </div>
+        <div class="slide__content">
+          <h1>How to get started?</h1>
+          <h2>If you're asking this question, great!</h2>
+          <p>First things first, you need:</p>
+          <ul>
+            <li>Time. Lots and lots of time...</li>
+            <li>Patience. Like you would not believe.</li>
+            <li>Inspiration.</li>
+            <li>A real-time editor.</li>
+            <li>A CSS Pre-processor.</li>
+          </ul>
+          <p>Or, you know, use SVG? Nah, where's the fun in that!</p>
+          <p>
+            It's important to remember that using CSS to create these sorts of
+            animations is a great <strong>learning exercise</strong>.
+          </p>
+          <p>
+            The things you learn while trying to work out how to make a box look
+            like a scarf is remarkable.
+          </p>
+        </div>
+      </div>
+
+      <!-- Slide 7 -->
+      <input type="radio" id="slide7" name="slide" />
+      <div class="slide">
+        <div class="slide__html">
+          <div class="drip"></div>
+        </div>
+        <div class="slide__content">
+          <h1>Start small</h1>
+          <h2>One drop at a time.</h2>
+          <p>Simple is often better:</p>
+          <ol>
+            <li>Take a basic shape, a <strong>box</strong>.</li>
+            <li>Round the corners to create a circle.</li>
+            <li>
+              Animate it with a <strong>bezier curve</strong> and diminishing
+              <strong>width</strong> and <strong>height</strong>.
+            </li>
+            <li>
+              Use a squashed circle with a <strong>border</strong> for the
+              splashes
+            </li>
+            <li>
+              Attach one to each <strong>pseudo element</strong> and
+              <strong>animate</strong> them.
+            </li>
+          </ol>
+          <p>
+            For this one simple animation, you'll learn a whole bunch about some
+            useful CSS features that you can use when building user interfaces
+            and other features on your websites and applications.
+          </p>
+        </div>
+      </div>
+
+      <!-- Slide 10 -->
+      <input type="radio" id="slide8" name="slide" />
+      <div class="slide">
+        <div class="slide__html">
+          <div class="chalice">
+            <div class="liquid red-wine"></div>
+          </div>
+        </div>
+        <div class="slide__content">
+          <h1>Cheers!</h1>
           <h2>Oh and by the way: No JavaScript here!</h2>
           <p>
-            This presentation was created with just HTML and CSS. No JavaScript,
-            images or SVG.
+            This presentation was created with just HTML and CSS. No JavaScript.
           </p>
           <p>
             Presentation source available on GitHub:
@@ -98,78 +385,6 @@
         </div>
       </div>
 
-      <!-- Slide 3 -->
-      <input type="radio" id="slide3" name="slide" />
-      <div class="slide">
-        <div class="slide__html"></div>
-        <div class="slide__content">
-          <h1>Slide 3</h1>
-        </div>
-      </div>
-
-      <!-- Slide 4 -->
-      <input type="radio" id="slide4" name="slide" />
-      <div class="slide">
-        <div class="slide__html"></div>
-        <div class="slide__content">
-          <h1>Slide 4</h1>
-        </div>
-      </div>
-
-      <!-- Slide 5 -->
-      <input type="radio" id="slide5" name="slide" />
-      <div class="slide">
-        <div class="slide__html"></div>
-        <div class="slide__content">
-          <h1>Slide 5</h1>
-        </div>
-      </div>
-
-      <!-- Slide 6 -->
-      <input type="radio" id="slide6" name="slide" />
-      <div class="slide">
-        <div class="slide__html"></div>
-        <div class="slide__content">
-          <h1>Slide 6</h1>
-        </div>
-      </div>
-
-      <!-- Slide 7 -->
-      <input type="radio" id="slide7" name="slide" />
-      <div class="slide">
-        <div class="slide__html"></div>
-        <div class="slide__content">
-          <h1>Slide 7</h1>
-        </div>
-      </div>
-
-      <!-- Slide 8 -->
-      <input type="radio" id="slide8" name="slide" />
-      <div class="slide">
-        <div class="slide__html"></div>
-        <div class="slide__content">
-          <h1>Slide 8</h1>
-        </div>
-      </div>
-
-      <!-- Slide 9 -->
-      <input type="radio" id="slide9" name="slide" />
-      <div class="slide">
-        <div class="slide__html"></div>
-        <div class="slide__content">
-          <h1>Slide 9</h1>
-        </div>
-      </div>
-
-      <!-- Slide 10 -->
-      <input type="radio" id="slide10" name="slide" />
-      <div class="slide">
-        <div class="slide__html"></div>
-        <div class="slide__content">
-          <h1>Slide 10</h1>
-        </div>
-      </div>
-
       <!-- Every slide must have a label placed inside this nav -->
       <nav>
         <label class="slide-button" for="slide1"></label>
@@ -180,8 +395,6 @@
         <label class="slide-button" for="slide6"></label>
         <label class="slide-button" for="slide7"></label>
         <label class="slide-button" for="slide8"></label>
-        <label class="slide-button" for="slide9"></label>
-        <label class="slide-button" for="slide10"></label>
       </nav>
     </fieldset>
   </body>

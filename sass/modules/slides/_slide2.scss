@@ -1,9 +1,104 @@
 @mixin slide2 {
   &__html {
-    background-color: orange;
+    overflow: hidden;
+    // background-color: rgb(219, 43, 87);
+    background-color: #4f7ab3;
+
+    .webpages {
+      height: 500px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .blank-page {
+      background-color: #fff;
+      padding: 15px;
+      width: 400px;
+      margin: 0 auto;
+      h1,
+      h2,
+      p {
+        font-family: Times;
+      }
+      box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2);
+
+      &:before {
+        content: "Without CSS";
+        position: absolute;
+        top: -30px;
+        font-weight: bold;
+        color: white;
+      }
+    }
+
+    .styled-page {
+      border-radius: 10px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: #486e45;
+      padding: 15px;
+      width: 400px;
+      margin: auto;
+      h1,
+      h2,
+      p {
+        text-align: center;
+        font-weight: 300;
+        color: white;
+      }
+      h1 {
+        margin: 0 auto;
+        animation: width;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        padding-bottom: 20px;
+        border-bottom: solid 4px #c55a5a;
+      }
+      box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2);
+
+      &:before {
+        content: "With CSS";
+        position: absolute;
+        top: -30px;
+        font-weight: bold;
+        color: white;
+      }
+    }
   }
 
   &__content {
     color: #202020;
+    h1 {
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    h2 {
+      margin-top: 0px;
+      font-size: 2em;
+      margin-bottom: 40px;
+    }
+    p,
+    li {
+      font-size: 1.5em;
+    }
+  }
+}
+
+@keyframes width {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 250px;
+  }
+  100% {
+    width: 100%;
   }
 }

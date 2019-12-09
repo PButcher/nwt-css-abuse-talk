@@ -1,9 +1,33 @@
 @import "../modules/slides/slide1";
 @import "../modules/slides/slide2";
+@import "../modules/slides/slide3";
+@import "../modules/slides/slide4";
+@import "../modules/slides/slide5";
+@import "../modules/slides/slide6";
+@import "../modules/slides/slide7";
+@import "../modules/slides/slide8";
 
 .slide:nth-of-type(1) .slide {
   @include slide1;
 }
 .slide:nth-of-type(2) .slide {
   @include slide2;
+}
+.slide:nth-of-type(3) .slide {
+  @include slide3;
+}
+.slide:nth-of-type(4) .slide {
+  @include slide4;
+}
+.slide:nth-of-type(5) .slide {
+  @include slide5;
+}
+.slide:nth-of-type(6) .slide {
+  @include slide6;
+}
+.slide:nth-of-type(7) .slide {
+  @include slide7;
+}
+.slide:nth-of-type(8) .slide {
+  @include slide8;
 }

@@ -1,0 +1,181 @@
+@mixin slide8 {
+  &__html {
+    background-color: #eee;
+
+    // Amount of liquid
+    $full: 45px;
+    $empty: 0px;
+
+    // Type of liquid
+    $red-wine-colour: #6d252e;
+    $white-wine-colour: #a1a265;
+
+    .chalice {
+      transform: scale(1.75);
+      position: absolute;
+      top: -100px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 45px;
+      height: 60px;
+      border: solid 2px rgba(0, 0, 0, 0.2);
+      border-top-width: 0px;
+      border-radius: 20% 20% 50% 50% / 50% 50% 40% 40%;
+
+      // Stalk? Stem? The bit you hold...
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: -45px;
+        left: 0px;
+        right: 0px;
+        width: 2px;
+        height: 43px;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      // Base
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -48px;
+        left: 0px;
+        right: 0px;
+        width: 30px;
+        height: 3px;
+        margin: auto;
+        border-radius: 50% 50% 0% 0% / 50% 50% 50% 50%;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .liquid {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 45px;
+      height: 60px;
+      border-top-width: 0px;
+      border-radius: 20% 20% 50% 50% / 50% 50% 40% 40%;
+      // background-color: #151515;
+      box-sizing: border-box;
+      overflow: hidden;
+
+      // Add new drinks here!
+      // Red Wine
+      &.red-wine {
+        &:before {
+          background-color: $red-wine-colour;
+        }
+      }
+
+      // White Wine
+      &.white-wine {
+        &:before {
+          background-color: $white-wine-colour;
+        }
+      }
+
+      &:before {
+        content: "";
+        width: 400%;
+        margin: auto;
+        position: absolute;
+        bottom: -10px;
+        left: -150%;
+        right: 0;
+        transform-origin: 50%;
+        animation: fill 10s infinite ease-in-out;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+        left: -4px;
+        margin: auto;
+        width: 30px;
+        height: 45px;
+        border: solid 6px rgba(255, 255, 255, 0.3);
+        border-top-width: 0px;
+        border-bottom-width: 0px;
+        border-right-width: 0px;
+        border-radius: 20% 20% 50% 50% / 50% 50% 40% 40%;
+        box-sizing: border-box;
+        transform: rotateZ(-3deg);
+      }
+    }
+
+    @keyframes fill {
+      0% {
+        transform: rotateZ(-25deg);
+        height: $empty + 10px;
+      }
+      2% {
+        transform: rotateZ(25deg);
+      }
+      4% {
+        transform: rotateZ(-10deg);
+      }
+      6% {
+        transform: rotateZ(10deg);
+      }
+      8% {
+        transform: rotateZ(-8deg);
+      }
+      10% {
+        transform: rotateZ(8deg);
+      }
+      12% {
+        transform: rotateZ(-6deg);
+      }
+      14% {
+        transform: rotateZ(6deg);
+      }
+      16% {
+        transform: rotateZ(-4deg);
+      }
+      18% {
+        transform: rotateZ(4deg);
+      }
+      20% {
+        transform: rotateZ(-2deg);
+      }
+      22% {
+        transform: rotateZ(2deg);
+      }
+      24% {
+        transform: rotateZ(0deg);
+        height: $full + 10px;
+      }
+      40% {
+        height: $full + 10px;
+      }
+      90% {
+        height: $empty + 10px;
+      }
+      100% {
+        height: $empty + 10px;
+      }
+    }
+  }
+
+  &__content {
+    color: #202020;
+    h1 {
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    h2 {
+      font-size: 2em;
+      margin-bottom: 40px;
+    }
+  }
+}

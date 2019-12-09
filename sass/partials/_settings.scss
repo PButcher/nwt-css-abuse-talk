@@ -3,10 +3,10 @@
 // ----
 
 // Number of slides
-$slide-count: 10;
+$slide-count: 8;
 
 // Tab colours (must be same as number of slides)
-$c-slides: rgb(219, 43, 87) #ccc #ccc #ccc #ccc #ccc #ccc #ccc #ccc #ccc;
+$c-slides: #ccc #ccc #ccc #ccc #ccc #ccc #ccc #ccc;
 
 // Slide backgrounds (if used, must be same as number of slides, otherwise false)
 $b-slides: false;
@@ -29,7 +29,7 @@ $c-light-grey: #ddd;
 // Other colours
 $c-slide-counter-background: rgba(0, 0, 0, 0.5);
 $c-slide-counter-text: rgba(255, 255, 255, 1);
-$c-slide-active-label-border: rgb(212, 63, 63);
+$c-slide-active-label-border: #c55a5a;
 $c-slide-active-label-text: $c-black;
 $c-background: #fff;
 $c-text: $c-light-grey;

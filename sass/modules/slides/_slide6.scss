@@ -1,0 +1,148 @@
+@mixin slide6 {
+  &__html {
+    overflow: hidden;
+    // background-color: rgb(219, 43, 87);
+    background-color: #1f75a7;
+    z-index: -2;
+
+    .snowman {
+      position: absolute;
+      top: -140px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-size: 120px 120px, 120px 120px, 120px 120px;
+      background-image: radial-gradient(#333 8%, transparent 8%),
+        radial-gradient(#333 8%, transparent 8%),
+        radial-gradient(#fff 100%, transparent 100%);
+      background-position: -30px -25px, 5px -20px, 0px 0px;
+      box-shadow: inset -5px -5px 0px rgba(0, 0, 0, 0.05);
+      animation: blink2 8s linear infinite;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 44px;
+        left: 6px;
+        border-right: solid 40px #fa0;
+        border-top: solid 8px transparent;
+        border-bottom: solid 8px transparent;
+        width: 1px;
+        height: 1px;
+        transform: rotateZ(14deg);
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        margin: 0 auto;
+        width: 160px;
+        height: 160px;
+        top: 80px;
+        left: -30px;
+        border-right-width: 10px;
+        border-left-width: 0px;
+        border-bottom-width: 10px;
+        border-top-width: 0px;
+        box-sizing: border-box;
+        border-color: rgba(0, 0, 0, 0.05);
+        border-style: solid;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-size: 100px 120px, 200px 70px, 200px 200px, 200px 200px,
+          200px 200px, 200px 200px;
+        background-image: linear-gradient(30deg, transparent 70%, #9c3b3b 0%),
+          linear-gradient(9deg, transparent 50%, #dc3b3b 0%),
+          radial-gradient(#333 3%, transparent 3%),
+          radial-gradient(#333 3.5%, transparent 3.5%),
+          radial-gradient(#333 4%, transparent 4%),
+          radial-gradient(#fff 100%, transparent 100%);
+        background-position: 30px 0px, 0px 0px, -28px 16px, -33px -7px,
+          -34px -34px, 0px 0px;
+        box-shadow: inset 25px 5px 0px rgba(255, 255, 255, 0.2);
+        z-index: -1;
+      }
+    }
+  }
+
+  &__content {
+    color: #202020;
+    h1 {
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    h2 {
+      margin-top: 0px;
+      font-size: 2em;
+      margin-bottom: 40px;
+    }
+    p,
+    li {
+      font-size: 1.5em;
+    }
+
+    pre {
+      background: #e5e5e5;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 1.3em;
+    }
+  }
+}
+
+@keyframes blink2 {
+  0% {
+    background-size: 120px 120px, 120px 120px, 120px 120px;
+    background-position: -30px -30px, 5px -25px, 0px 0px;
+  }
+  1% {
+    background-size: 120px 0px, 120px 0px, 120px 120px;
+    background-position: -30px 30px, 5px 35px, 0px 0px;
+  }
+  2% {
+    background-size: 120px 120px, 120px 120px, 120px 120px;
+    background-position: -30px -30px, 5px -25px, 0px 0px;
+  }
+  31% {
+    background-size: 120px 120px, 120px 120px, 120px 120px;
+    background-position: -30px -30px, 5px -25px, 0px 0px;
+  }
+  32% {
+    background-size: 120px 120px, 120px 120px, 120px 120px;
+    background-position: -30px -30px, 5px -25px, 0px 0px;
+  }
+  33% {
+    background-size: 120px 0px, 120px 0px, 120px 120px;
+    background-position: -30px 30px, 5px 35px, 0px 0px;
+  }
+  34% {
+    background-size: 120px 120px, 120px 120px, 120px 120px;
+    background-position: -30px -30px, 5px -25px, 0px 0px;
+  }
+  40% {
+    background-size: 120px 120px, 120px 120px, 120px 120px;
+    background-position: -30px -30px, 5px -25px, 0px 0px;
+  }
+  41% {
+    background-size: 120px 120px, 120px 120px, 120px 120px;
+    background-position: -30px -30px, 5px -25px, 0px 0px;
+  }
+  42% {
+    background-size: 120px 0px, 120px 0px, 120px 120px;
+    background-position: -30px 30px, 5px 35px, 0px 0px;
+  }
+  43% {
+    background-size: 120px 120px, 120px 120px, 120px 120px;
+    background-position: -30px -30px, 5px -25px, 0px 0px;
+  }
+  100% {
+    background-size: 120px 120px, 120px 120px, 120px 120px;
+    background-position: -30px -30px, 5px -25px, 0px 0px;
+  }
+}

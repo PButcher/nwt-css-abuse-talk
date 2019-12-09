@@ -1,0 +1,579 @@
+$c-compacter-door: #ed761d;
+$c-compacter-door-indent: darken($c-compacter-door, 5%);
+$c-sump: darken($c-compacter-door, 38%);
+$c-body-edge: darken($c-compacter-door, 15%);
+$c-body-gaps: rgba(0, 0, 0, 0.3);
+$c-body-highlights: rgba(255, 255, 255, 0.2);
+$c-hand: darken(#505050, 5%);
+$c-bumpers: #1a1a1a;
+$c-neck: darken(#f9b42a, 10%);
+$c-electronics: #4a4a4a;
+$c-electronics-panel-light: #cc0000;
+$c-electronics-panel-border: darken($c-electronics, 4%);
+$c-solar-meter-background: #151515;
+$c-solar-meter-colour: #eddf60;
+$c-hand-store-lip: #8f8f8f;
+$c-hand-store-base: #404040;
+$c-track-crest: #202020;
+$c-track-trough: #3a3a3a;
+$c-axels: #101010;
+$c-spot: #dd0000;
+$c-land: darken(#352840, 5%);
+
+@mixin slide5 {
+  &__html {
+    overflow: hidden;
+    margin: 0;
+    background: linear-gradient(-160deg, #120041 0%, #b27176 70%);
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: -970px;
+      left: calc(50% - 2000px);
+      margin: auto;
+      width: 4000px;
+      height: 1000px;
+      border-radius: 50% 50% 0 0;
+      box-shadow: inset 250px 0 20px rgba(255, 255, 255, 0.15);
+      background: $c-land;
+    }
+
+    .wall-e {
+      animation: tracks 0.25s infinite linear;
+      transform: scale(2);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 100px;
+      height: 115px;
+      box-shadow: 0px 20px 30px -20px rgba(0, 0, 0, 0.5),
+        inset 0px -20px 20px -20px rgba(0, 0, 0, 0.5);
+      background: linear-gradient(
+          to bottom,
+          lighten($c-hand, 10%) 0px,
+          lighten($c-hand, 10%) 2px,
+          darken($c-hand, 15%) 2px,
+          darken($c-hand, 15%) 6px,
+          lighten($c-hand, 10%) 6px,
+          lighten($c-hand, 10%) 8px
+        ),
+        linear-gradient(
+          to right,
+          $c-hand 0px,
+          lighten($c-hand, 5%) 12px,
+          lighten($c-hand, 10%) 12px,
+          lighten($c-hand, 15%) 20px
+        ),
+        linear-gradient(
+          to right,
+          $c-hand 0px,
+          lighten($c-hand, 5%) 12px,
+          lighten($c-hand, 10%) 12px,
+          lighten($c-hand, 15%) 20px
+        ),
+        linear-gradient(
+          to bottom,
+          lighten($c-hand, 10%) 0px,
+          lighten($c-hand, 10%) 2px,
+          darken($c-hand, 15%) 2px,
+          darken($c-hand, 15%) 6px,
+          lighten($c-hand, 10%) 6px,
+          lighten($c-hand, 10%) 8px
+        ),
+        linear-gradient(
+          to left,
+          $c-hand 0px,
+          lighten($c-hand, 5%) 12px,
+          lighten($c-hand, 10%) 12px,
+          lighten($c-hand, 15%) 20px
+        ),
+        linear-gradient(
+          to left,
+          $c-hand 0px,
+          lighten($c-hand, 5%) 12px,
+          lighten($c-hand, 10%) 12px,
+          lighten($c-hand, 15%) 20px
+        ),
+        linear-gradient(
+          to right,
+          $c-hand-store-lip 0px,
+          $c-hand-store-lip 16px,
+          $c-neck 16px,
+          $c-neck 50px,
+          $c-hand-store-lip 50px,
+          $c-hand-store-lip 66px
+        ),
+        repeating-linear-gradient(
+          to right,
+          transparent 0px,
+          transparent 1px,
+          $c-electronics-panel-border 1px,
+          $c-electronics-panel-border 2px,
+          transparent 2px,
+          transparent 14px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          transparent 0px,
+          transparent 1px,
+          $c-electronics-panel-border 1px,
+          $c-electronics-panel-border 2px,
+          transparent 2px,
+          transparent 10px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          transparent 0px,
+          transparent 1px,
+          darken($c-electronics-panel-border, 5%) 1px,
+          darken($c-electronics-panel-border, 5%) 2px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          transparent 0px,
+          transparent 1px,
+          darken($c-electronics-panel-border, 5%) 1px,
+          darken($c-electronics-panel-border, 5%) 2px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          transparent 0px,
+          transparent 1px,
+          darken($c-electronics-panel-border, 5%) 1px,
+          darken($c-electronics-panel-border, 5%) 2px
+        ),
+        radial-gradient(
+          circle at center,
+          $c-electronics-panel-light 1.25px,
+          transparent 1.25px
+        ),
+        linear-gradient(
+          to bottom,
+          darken($c-electronics-panel-border, 5%) 0px,
+          darken($c-electronics-panel-border, 5%) 3px
+        ),
+        repeating-linear-gradient(
+          to right,
+          $c-electronics-panel-border 0px,
+          $c-electronics-panel-border 1px,
+          transparent 1px,
+          transparent 4px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          $c-electronics-panel-border 0px,
+          $c-electronics-panel-border 1px,
+          transparent 1px,
+          transparent 4px
+        ),
+        linear-gradient(
+          to right,
+          $c-solar-meter-colour 0px,
+          $c-solar-meter-colour 13px
+        ),
+        radial-gradient(
+          circle at center,
+          $c-solar-meter-colour 2px,
+          transparent 2px
+        ),
+        linear-gradient(
+          to bottom,
+          darken($c-solar-meter-colour, 45%) 0px,
+          darken($c-solar-meter-colour, 45%) 1px,
+          transparent 1px,
+          transparent 2px,
+          darken($c-solar-meter-colour, 45%) 2px,
+          darken($c-solar-meter-colour, 45%) 3px,
+          transparent 3px,
+          transparent 4px,
+          $c-solar-meter-colour 4px,
+          $c-solar-meter-colour 5px,
+          transparent 5px,
+          transparent 6px,
+          $c-solar-meter-colour 6px,
+          $c-solar-meter-colour 7px,
+          transparent 7px,
+          transparent 8px,
+          $c-solar-meter-colour 8px,
+          $c-solar-meter-colour 11px
+        ),
+        linear-gradient(
+          to bottom,
+          lighten($c-solar-meter-background, 15%) 0px,
+          lighten($c-solar-meter-background, 15%) 2px,
+          $c-solar-meter-background 2px,
+          $c-solar-meter-background 17px,
+          lighten($c-solar-meter-background, 15%) 17px,
+          lighten($c-solar-meter-background, 15%) 19px
+        ),
+        linear-gradient(to bottom, $c-electronics 0px, $c-electronics 19px),
+        linear-gradient(
+          to bottom,
+          $c-hand-store-base 0px,
+          $c-hand-store-base 4px,
+          darken($c-hand-store-base, 10%) 4px,
+          darken($c-hand-store-base, 10%) 6px,
+          $c-hand-store-base 6px,
+          $c-hand-store-base 13px,
+          darken($c-hand-store-base, 10%) 13px,
+          darken($c-hand-store-base, 10%) 15px,
+          $c-hand-store-base 15px,
+          $c-hand-store-base 19px
+        ),
+        linear-gradient(to bottom, transparent 0px, rgba(0, 0, 0, 0.5) 37px),
+        repeating-linear-gradient(
+          to right,
+          #000 0px,
+          #000 1px,
+          transparent 1px,
+          transparent 2px
+        ),
+        linear-gradient(to right, #000 0px, #000 5px),
+        repeating-linear-gradient(
+          to right,
+          #000 0px,
+          #000 1px,
+          transparent 1px,
+          transparent 3px,
+          #000 3px,
+          #000 4px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          #000 0px,
+          #000 1px,
+          transparent 1px,
+          transparent 2px,
+          #000 2px,
+          #000 3px
+        ),
+        repeating-linear-gradient(
+          to right,
+          #000 0px,
+          #000 1px,
+          transparent 1px,
+          transparent 6px
+        ),
+        repeating-linear-gradient(
+          to right,
+          #000 0px,
+          #000 4px,
+          transparent 4px,
+          transparent 6px
+        ),
+        radial-gradient(circle at center, #000 1px, transparent 1.1px),
+        linear-gradient(to bottom, #fff 0px, #fff 5px),
+        repeating-linear-gradient(
+          to bottom,
+          #fff 0px,
+          #fff 1px,
+          transparent 1px,
+          transparent 2px
+        ),
+        radial-gradient(circle at center, $c-spot 4px, transparent 4px),
+        repeating-linear-gradient(
+          to right,
+          $c-body-gaps 0px,
+          $c-body-gaps 1px,
+          transparent 1px,
+          transparent 3px,
+          $c-body-highlights 3px,
+          $c-body-highlights 4px,
+          transparent 4px,
+          transparent 18px
+        ),
+        repeating-linear-gradient(
+          to right,
+          transparent 0px,
+          transparent 1px,
+          $c-body-gaps 1px,
+          $c-body-gaps 3px,
+          transparent 3px,
+          transparent 18px
+        ),
+        repeating-linear-gradient(
+          to right,
+          transparent 0px,
+          transparent 1px,
+          $c-body-highlights 1px,
+          $c-body-highlights 3px,
+          transparent 3px,
+          transparent 18px
+        ),
+        repeating-linear-gradient(
+          to right,
+          transparent 0px,
+          transparent 1px,
+          transparent 1px,
+          $c-compacter-door-indent 3px,
+          transparent 3px,
+          transparent 18px
+        ),
+        linear-gradient(
+          to bottom,
+          darken($c-compacter-door, 25%) 0px,
+          $c-compacter-door 11px,
+          $c-compacter-door 11px,
+          darken($c-compacter-door, 20%) 58px
+        ),
+        linear-gradient(to bottom, transparent 0px, transparent 1px),
+        linear-gradient(
+          to right,
+          $c-bumpers 0px,
+          $c-bumpers 18px,
+          transparent 18px,
+          transparent 47px,
+          $c-bumpers 47px,
+          $c-bumpers 66px
+        ),
+        linear-gradient(
+          to bottom,
+          transparent 0px,
+          $c-electronics 0px,
+          $c-electronics 20px,
+          darken($c-body-edge, 40%) 20px,
+          $c-body-edge 31px,
+          $c-body-edge 31px,
+          darken($c-body-edge, 20%) 57px,
+          $c-sump 57px,
+          darken($c-sump, 5%) 62px,
+          transparent 62px
+        ),
+        linear-gradient(
+          to bottom,
+          $c-neck 0px,
+          darken($c-neck, 15%) 12px,
+          darken($c-neck, 30%) 16px
+        ),
+        linear-gradient(
+          to bottom,
+          #333333 1px,
+          #888888 3px,
+          #aaaaaa 3px,
+          #333333 8px
+        ),
+        linear-gradient(
+          to bottom,
+          lighten($c-neck, 40%) 0px,
+          darken($c-neck, 20%) 14px
+        ),
+        linear-gradient(to left, rgba(0, 0, 0, 0.5) 0px, transparent 10px),
+        linear-gradient(
+          176deg,
+          rgba(255, 255, 255, 0.2) 0px,
+          transparent 25px,
+          transparent 25px,
+          rgba(0, 0, 0, 0.5) 32px
+        ),
+        linear-gradient(to bottom, $c-land 0px, $c-land 8px),
+        repeating-linear-gradient(
+          -4deg,
+          $c-track-crest 0px,
+          $c-track-crest 4px,
+          $c-track-trough 4px,
+          $c-track-trough 8px
+        ),
+        linear-gradient(to right, rgba(0, 0, 0, 0.5) 0px, transparent 10px),
+        linear-gradient(
+          -176deg,
+          rgba(255, 255, 255, 0.2) 0px,
+          transparent 25px,
+          transparent 25px,
+          rgba(0, 0, 0, 0.5) 32px
+        ),
+        linear-gradient(to bottom, $c-land 0px, $c-land 8px),
+        repeating-linear-gradient(
+          4deg,
+          $c-track-crest 0px,
+          $c-track-crest 4px,
+          $c-track-trough 4px,
+          $c-track-trough 8px
+        ),
+        linear-gradient(
+          to right,
+          $c-axels 0px,
+          $c-axels 10px,
+          transparent 10px,
+          transparent 56px,
+          $c-axels 56px,
+          $c-axels 66px
+        ),
+        radial-gradient($c-axels 10px, transparent 10px),
+        radial-gradient($c-axels 10px, transparent 10px);
+      background-size: 8px 8px, 20px 9px, 20px 9px, 8px 8px, 20px 9px, 20px 9px,
+        66px 1px, 16px 11px, 13px 12px, 3px 9px, 3px 9px, 3px 9px, 3px 2px,
+        3px 2px, 7px 5px, 5px 5px, 13px 1px, 4px 4px, 7px 11px, 15px 19px,
+        34px 19px, 66px 19px, 56px 37px, 5px 5px, 5px 1px, 4px 4px, 2px 3px,
+        10px 5px, 10px 1px, 3px 3px, 1px 5px, 4px 5px, 8px 9px, 40px 18px,
+        40px 1px, 40px 1px, 40px 16px, 56px 37px, 58px 1px, 66px 18px, 66px 62px,
+        8px 16px, 20px 8px, 2px 14px, 17px 48px, 17px 48px, 17px 8px, 17px 56px,
+        17px 48px, 17px 48px, 17px 8px, 17px 56px, 66px 10px, 20px 20px,
+        20px 20px;
+      background-repeat: no-repeat;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        top: -105px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 27px;
+        height: 20px;
+        box-sizing: border-box;
+        border: solid 1px #333;
+        border-radius: 4px 52px 39px 90px;
+        transform-origin: 6px 4px;
+        box-shadow: inset 0 0 2px #000;
+        background: radial-gradient(
+            lighten(rgba(160, 70, 70, 0.2), 30%) 0px,
+            transparent 1px
+          ),
+          radial-gradient(
+            lighten(rgba(23, 87, 167, 1), 30%) 0px,
+            transparent 2px
+          ),
+          radial-gradient(#151515 3px, transparent 3px),
+          radial-gradient(rgba(255, 255, 255, 0.6) 0px, transparent 1px),
+          radial-gradient(#333 3px, transparent 4px),
+          radial-gradient(
+            darken(#1757a7, 15%) 4px,
+            #1757a7 6px,
+            transparent 6px
+          ),
+          radial-gradient(#666666 7px, transparent 7px), #aaaaaa;
+        background-size: 2px 2px, 4px 4px, 6px 6px, 2px 2px, 8px 8px, 12px 12px,
+          14px 14px, 27px 20px;
+        background-position: 12px 8px, 8px 5px, 8px 5px, 6px 4px, 7px 4px,
+          5px 2px, 4px 1px, 0px 0px;
+        background-repeat: no-repeat;
+      }
+
+      &:before {
+        left: 28px;
+        transform: rotateZ(20deg);
+        animation: 12s twitch-right infinite ease-in-out;
+      }
+
+      &:after {
+        left: 0px;
+        transform: rotateZ(-20deg) rotateY(180deg);
+        animation: 12s twitch-left infinite ease-in-out;
+      }
+    }
+  }
+
+  &__content {
+    color: #202020;
+    h1 {
+      font-size: 3em;
+      font-weight: 700;
+    }
+    h2 {
+      margin-top: 0px;
+      font-size: 2em;
+    }
+    p,
+    li {
+      font-size: 1.5em;
+    }
+
+    pre {
+      background: #e5e5e5;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 1.3em;
+    }
+  }
+}
+
+@keyframes tracks {
+  0% {
+    background-position: 10px 43px, 10px 37px, 10px 48px, 82px 43px, 70px 37px,
+      70px 48px, 17px 30px, 33px 32px, 35px 31px, 36px 33px, 40px 33px,
+      44px 33px, 37px 46px, 37px 46px, 36px 44px, 36px 44px, 52px 34px,
+      52px 36px, 58px 36px, 51px 31px, 33px 31px, 17px 31px, 22px 50px,
+      38px 78px, 38px 82px, 45px 79px, 46px 78px, 51px 78px, 51px 82px,
+      62px 79px, 68px 78px, 68px 78px, 66px 76px, 30px 52px, 30px 52px,
+      30px 69px, 30px 53px, 22px 50px, 21px 87px, 17px 74px, 17px 30px,
+      46px 14px, 40px 0px, 49px 0px, 0px 72px, 0px 72px, 0px 64px, 0px 64px,
+      83px 72px, 83px 72px, 83px 64px, 83px 64px, 17px 92px, 17px 82px,
+      62px 82px;
+  }
+  100% {
+    background-position: 10px 43px, 10px 37px, 10px 48px, 82px 43px, 70px 37px,
+      70px 48px, 17px 30px, 33px 32px, 35px 31px, 36px 33px, 40px 33px,
+      44px 33px, 37px 46px, 37px 46px, 36px 44px, 36px 44px, 52px 34px,
+      52px 36px, 58px 36px, 51px 31px, 33px 31px, 17px 31px, 22px 50px,
+      38px 78px, 38px 82px, 45px 79px, 46px 78px, 51px 78px, 51px 82px,
+      62px 79px, 68px 78px, 68px 78px, 66px 76px, 30px 52px, 30px 52px,
+      30px 69px, 30px 53px, 22px 50px, 21px 87px, 17px 74px, 17px 30px,
+      46px 14px, 40px 0px, 49px 0px, 0px 72px, 0px 72px, 0px 64px, 0px 72px,
+      83px 72px, 83px 72px, 83px 64px, 83px 72px, 17px 92px, 17px 82px,
+      62px 82px;
+  }
+}
+
+@keyframes twitch-right {
+  10% {
+    transform: rotateZ(20deg);
+  }
+  12% {
+    transform: rotateZ(5deg);
+  }
+  14% {
+    transform: rotateZ(5deg);
+  }
+  16% {
+    transform: rotateZ(20deg);
+  }
+  20% {
+    transform: rotateZ(20deg);
+  }
+  22% {
+    transform: rotateZ(30deg);
+  }
+  25% {
+    transform: rotateZ(5deg);
+  }
+  27% {
+    transform: rotateZ(20deg);
+  }
+}
+
+@keyframes twitch-left {
+  10% {
+    transform: rotateZ(-20deg) rotateY(180deg);
+  }
+  12% {
+    transform: rotateZ(-20deg) rotateY(180deg);
+  }
+  14% {
+    transform: rotateZ(-5deg) rotateY(180deg);
+  }
+  16% {
+    transform: rotateZ(-5deg) rotateY(180deg);
+  }
+  18% {
+    transform: rotateZ(-20deg) rotateY(180deg);
+  }
+  20% {
+    transform: rotateZ(-20deg) rotateY(180deg);
+  }
+  22% {
+    transform: rotateZ(-30deg) rotateY(180deg);
+  }
+  25% {
+    transform: rotateZ(-5deg) rotateY(180deg);
+  }
+  27% {
+    transform: rotateZ(-20deg) rotateY(180deg);
+  }
+}
