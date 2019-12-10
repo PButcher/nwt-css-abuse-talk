@@ -6,7 +6,7 @@ Pushing the boundaries of CSS - A talk presented at North Wales Tech, December 9
 
 You live in a parallel universe where SVG and JavaScript haven't been invented yet. You need to build a webpage with interactive content and vector images but the only tools at your disposal are HTML and CSS. It's the end of days, right? Wrong! You might be surprised by just how much is possible with these two humble languages. Here be dragons.
 
-The talk is available [online](https://pbutcher.uk/nwt-css-abuse-talk). Alternatively, you can build and serve it locally.
+The talk is available [online](https://pbutcher.uk/nwt/css-abuse-talk). Alternatively, you can build and serve it locally.
 
 ## Build and Serve Locally
 
